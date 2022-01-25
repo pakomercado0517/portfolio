@@ -29,7 +29,7 @@ Yo realmente soy consiente que en la red, hay miles de perfiles que sorprenden c
       </button>
       <button className="w-44 h-10 flex flex-row justify-center items-center border-2 border-blue-500 mx-3 text-blue-500 rounded-lg shadow-xl cursor-pointer">
         <img className="w-6 h-6" src="https://img.icons8.com/ios/50/3b83f6/set-as-resume.png"/>
-        <a className="ml-2" href="CV-2022-NP.pdf" target="_blank">Ver mi CV o Resume</a>
+        <a className="ml-2" href="https://firebasestorage.googleapis.com/v0/b/servio-34472.appspot.com/o/documents%2FCV-2022-NP.pdf?alt=media&token=4cb6f02a-6b0e-4a55-a3c0-c2e7591a791e" target="_blank">CV o Resume</a>
       </button>
     </div>
     </>
