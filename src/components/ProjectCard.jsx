@@ -88,7 +88,7 @@ function ProjectCard() {
                           hover:text-primary
                           "
                       >
-                        Catálogos de Sissy.
+                        Catálogos de Sissy
                       </a>
                     </h3>
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
