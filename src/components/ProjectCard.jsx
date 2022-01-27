@@ -32,17 +32,17 @@ function ProjectCard() {
                           hover:text-primary
                           "
                       >
-                        Proyecto grupal ServIO
+                        ServIO
                       </a>
                     </h3>
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
                       Una aplicaición hecha en el bootcamp de #soyHenry. Su fin,
-                      brindar un servicio donde puedes cubrir algun tipo de
+                      brindar un servicio donde puedes cubrir algún tipo de
                       necesidad recurriendo a diferentes tipos de profesionales.
                       Al igual, puedes registrarte como profesional y poder así
                       generar un ingreso extra. La aplicación mantiene un
                       control de calidad en la relación cliente-profesional
-                      brindando la meojor garantía posible en ambas partes.
+                      brindando la mejor garantía posible en ambas partes.
                     </p>
                     <a
                       href="https://serv-io.surge.sh"
@@ -94,7 +94,7 @@ function ProjectCard() {
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
                       Esta aplicación te ayuda a tener un mejor alcance de
                       clientes, si te dedicas a vender productos por catálogo.
-                      Se crea una propia API Rest con la información y enlcaes a
+                      Se crea una propia API Rest con la información y enlaces a
                       los diferentes catálogos, y así poder mostrarlos de manera
                       online a más personas. Además, tiene un formulario para el
                       contacto con el vendedor para cotizaciones.
