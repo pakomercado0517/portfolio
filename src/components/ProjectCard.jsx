@@ -289,6 +289,63 @@ function ProjectCard() {
                   </div>
                 </div>
               </div>
+              <div className="w-full md:w-1/2 xl:w-1/3 px-4">
+                <div className="bg-white rounded-lg overflow-hidden mb-10">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/servio-34472.appspot.com/o/portfolio-projects%2FCaptura%20de%20Pantalla%202022-02-06%20a%20la(s)%2010.07.50%20p.m..png?alt=media&token=3f39cbd1-6800-4ebf-b37c-9f8844cac6f4"
+                    alt="image"
+                    className="w-full"
+                  />
+                  <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                    <h3>
+                      <a
+                        href="javascript:void(0)"
+                        className="
+                          font-semibold
+                          text-dark text-xl
+                          sm:text-[22px]
+                          md:text-xl
+                          lg:text-[22px]
+                          xl:text-xl
+                          2xl:text-[22px]
+                          mb-4
+                          block
+                          hover:text-primary
+                          "
+                      >
+                        Henry Weather App
+                      </a>
+                    </h3>
+                    <p className="text-base text-justify text-body-color leading-relaxed mb-7">
+                      Esta es una SPA (Single Page Aplication) hecha
+                      individualmente, para el bootcamp de #soyHenry donde se
+                      pone a prueba lo aprendido a lo largo del mismo, acerca de
+                      las herramientas que se utilizaron en la elaboración de la
+                      App. Donde consumimos una API Rest del clima, hecha con
+                      React Js y Redux para realizar búsquedas las ciudades a
+                      las que gustes ver sus propiedades climatológicas en
+                      tiempo real.
+                    </p>
+                    <a
+                      href="https://pako-weather.surge.sh"
+                      target="_blank"
+                      className="
+                        inline-block
+                        py-2
+                        px-7
+                        border border-[#E5E7EB]
+                        rounded-full
+                        text-base text-body-color
+                        font-medium
+                        hover:border-primary hover:bg-primary hover:text-white
+                        transition
+                        "
+                    >
+                      Visitar Página
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
