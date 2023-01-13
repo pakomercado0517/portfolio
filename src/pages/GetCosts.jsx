@@ -54,19 +54,16 @@ function GetCosts() {
 
   const getSubtotal = (num) => {
     let result;
-    if (num.length > 0) {
-      result = num / 1.16;
-      result = result.toFixed(2);
-      result = result.toString().split(".");
-      result[0] = result[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
+    result = num / 1.16;
+    result = result.toFixed(2);
+    result = result.toString().split(".");
+    result[0] = result[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return result.join(".");
   };
 
   const getTotal = (num) => {
     const parts = num.toString().split(".");
-    if (num.length > 0)
-      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join(".");
   };
 
