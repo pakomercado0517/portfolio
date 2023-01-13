@@ -45,16 +45,34 @@ function GetCosts() {
 
   const getResults = () => {
     const arr = [];
-    if (costo.length > 1) {
-      costo.map((el) => arr.push(parseInt(el.total)));
+    costo.map((el) => arr.push(parseInt(el.total)));
+    let total = arr.reduce((a, b) => a + b, 0);
+    total = total.toString().split(".");
+    total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return total.join(".");
+  };
+
+  const getSubtotal = (num) => {
+    let result;
+    if (num.length > 0) {
+      result = num / 1.16;
+      result = result.toFixed(2);
+      result = result.toString().split(".");
+      result[0] = result[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    const total = arr.reduce((a, b) => a + b, 0);
-    return total;
+    return result.join(".");
+  };
+
+  const getTotal = (num) => {
+    const parts = num.toString().split(".");
+    if (num.length > 0)
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
   };
 
   return (
-    <div className={`w-screen flex justify-center items-center`}>
-      <form className="">
+    <div className={`w-screen flex justify-center items-center flex-col mx-5`}>
+      <form>
         <div>
           <h2>Ingresa el RFC:</h2>
           <input
@@ -85,8 +103,10 @@ function GetCosts() {
         </div>
       </form>
 
+      {/* Here showing the table with the data... */}
       {/* component */}
-      <section className="antialiased bg-gray-100 text-gray-600 h-screen px-4">
+
+      <section className="antialiased bg-gray-100 text-gray-600 h-auto w-screen px-4">
         <div className="flex flex-col justify-center h-full">
           {/* Table */}
           <div
@@ -129,12 +149,14 @@ function GetCosts() {
                             </div>
                           </td>
                           <td className="p-2 whitespace-nowrap">
-                            <div className="font-medium text-blue-500">{`$ ${Math.floor(
-                              el.total / 1.16
-                            )}`}</div>
+                            <div className="font-medium text-blue-500">
+                              {getSubtotal(el.total)}
+                            </div>
                           </td>
                           <td className="p-2 whitespace-nowrap">
-                            <div className="font-medium text-green-500">{`$ ${el.total}`}</div>
+                            <div className="font-medium text-green-500">
+                              {getTotal(el.total)}
+                            </div>
                           </td>
                         </tr>
                       );

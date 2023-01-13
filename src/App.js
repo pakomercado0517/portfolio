@@ -10,7 +10,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/get/cost" element={<GetCosts />} />
       </Routes>
-      <ToastContainer />
     </div>
   );
 }
