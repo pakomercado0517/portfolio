@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CreatePDF from "../components/CreatePFD";
 
 function GetCosts() {
   const initialState = {
@@ -16,6 +17,7 @@ function GetCosts() {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
+      subtotal: formData.total / 1.16,
     });
   };
 
@@ -30,6 +32,7 @@ function GetCosts() {
           return {
             ...formData,
             total: parseInt(c.total) + parseInt(formData.total),
+            subtotal: c.subtotal + formData.subtotal,
           };
         }
         return c;
@@ -178,6 +181,7 @@ function GetCosts() {
           </div>
         </div>
       </section>
+      <CreatePDF costo={costo} />
     </div>
   );
 }
