@@ -45,8 +45,6 @@ function CreatePFD({ costo }) {
     doc.save("resultado.pdf");
   };
 
-  console.log("total", totalResult);
-
   return (
     <div className="my-8">
       <button
