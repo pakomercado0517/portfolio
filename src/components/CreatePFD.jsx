@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 
 function CreatePFD({ costo }) {
+  const [totalResult, setTotalResult] = useState();
   const doc = new jsPDF();
+
+  useEffect(() => {
+    const getResults = async () => {
+      const arr = [];
+      await costo.map((el) => arr.push(parseInt(el.total)));
+      let result = arr.reduce((a, b) => a + b, 0);
+      result = result.toString().split(".");
+      result[0] = result[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      setTotalResult(result);
+    };
+    getResults();
+  }, [costo]);
 
   const formatTotal = (num) => {
     let result;
@@ -28,8 +41,11 @@ function CreatePFD({ costo }) {
         return [el.rfc, formatSubtotal(el.total / 1.16), formatTotal(el.total)];
       }),
     });
+    doc.cell(150, 275, 120, 20, `Total: $ ${totalResult}`);
     doc.save("resultado.pdf");
   };
+
+  console.log("total", totalResult);
 
   return (
     <div className="my-8">
