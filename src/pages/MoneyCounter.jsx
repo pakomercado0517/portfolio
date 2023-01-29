@@ -11,7 +11,6 @@ function MoneyCounter() {
   });
 
   const [total, setTotal] = useState({});
-  const [result, setResult] = useState([]);
 
   const handleChange = async (e) => {
     setCounter({
@@ -22,10 +21,9 @@ function MoneyCounter() {
       ...total,
       [e.target.name]: parseInt(e.target.name) * e.target.value,
     });
-    await setResult(Object.values(total));
   };
 
-  const getTotals = (num) => {
+  const formatNumber = (num) => {
     if (num !== undefined) {
       num = num.toString().split(",");
       num[0] = num[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -36,9 +34,7 @@ function MoneyCounter() {
   const getResults = () => {
     let $total = Object.values(total);
     $total = $total.reduce((a, b) => a + b, 0);
-    $total = $total.toString().split(",");
-    $total[0] = $total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return $total.join(".");
+    return formatNumber($total);
   };
 
   return (
@@ -94,7 +90,7 @@ function MoneyCounter() {
                     </td>
                     <td className="p-2">
                       <div className="text-left font-medium text-green-500">
-                        ${getTotals(total[1000])}
+                        ${formatNumber(total[1000])}
                       </div>
                     </td>
                   </tr>
@@ -118,7 +114,7 @@ function MoneyCounter() {
                     </td>
                     <td className="p-2">
                       <div className="text-left font-medium text-green-500">
-                        ${getTotals(total[500])}
+                        ${formatNumber(total[500])}
                       </div>
                     </td>
                   </tr>
@@ -142,7 +138,7 @@ function MoneyCounter() {
                     </td>
                     <td className="p-2">
                       <div className="text-left font-medium text-green-500">
-                        ${getTotals(total[200])}
+                        ${formatNumber(total[200])}
                       </div>
                     </td>
                   </tr>
@@ -166,7 +162,7 @@ function MoneyCounter() {
                     </td>
                     <td className="p-2">
                       <div className="text-left font-medium text-green-500">
-                        ${getTotals(total[100])}
+                        ${formatNumber(total[100])}
                       </div>
                     </td>
                   </tr>
@@ -190,7 +186,7 @@ function MoneyCounter() {
                     </td>
                     <td className="p-2">
                       <div className="text-left font-medium text-green-500">
-                        ${getTotals(total[50])}
+                        ${formatNumber(total[50])}
                       </div>
                     </td>
                   </tr>
@@ -214,7 +210,7 @@ function MoneyCounter() {
                     </td>
                     <td className="p-2">
                       <div className="text-left font-medium text-green-500">
-                        ${getTotals(total[20])}
+                        ${formatNumber(total[20])}
                       </div>
                     </td>
                   </tr>
