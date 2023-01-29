@@ -71,7 +71,9 @@ function GetCosts() {
   };
 
   return (
-    <div className={`w-screen flex justify-center items-center flex-col mx-5`}>
+    <div
+      className={`w-screen flex justify-center items-center flex-col mx-5 mt-14`}
+    >
       <form>
         <div>
           <h2>Ingresa el RFC:</h2>
