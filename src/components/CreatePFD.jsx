@@ -41,7 +41,10 @@ function CreatePFD({ costo }) {
         return [el.rfc, formatSubtotal(el.total / 1.16), formatTotal(el.total)];
       }),
     });
-    doc.cell(150, 275, 120, 20, `Total: $ ${totalResult}`);
+    const tableHeight = doc.previousAutoTable.finalY;
+    const totalX = 145;
+    const totalY = Math.ceil(tableHeight) + 8;
+    doc.cell(totalX, totalY, 70, 10, `Total: $ ${totalResult}`);
     doc.save("resultado.pdf");
   };
 

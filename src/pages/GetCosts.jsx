@@ -70,6 +70,9 @@ function GetCosts() {
     return parts.join(".");
   };
 
+  console.log("formData", formData);
+  console.log("esto es una prueba para console ninja...");
+
   return (
     <div
       className={`w-screen flex justify-center items-center flex-col mx-5 mt-14`}

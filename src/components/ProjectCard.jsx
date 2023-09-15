@@ -12,13 +12,12 @@ function ProjectCard() {
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/servio-34472.appspot.com/o/portfolio-projects%2FCaptura%20de%20Pantalla%202022-01-25%20a%20la(s)%205.26.41%20p.m..png?alt=media&token=bcffe6c5-2aa3-4f5f-856b-9c4db6fbe89f"
-                    alt="image"
+                    alt="profile"
                     className="w-full"
                   />
                   <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                     <h3>
-                      <a
-                        href="javascript:void(0)"
+                      <p
                         className="
                           font-semibold
                           text-dark text-xl
@@ -33,7 +32,7 @@ function ProjectCard() {
                           "
                       >
                         ServIO
-                      </a>
+                      </p>
                     </h3>
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
                       Una aplicaición hecha en el bootcamp de #soyHenry. Su fin,
@@ -47,6 +46,7 @@ function ProjectCard() {
                     <a
                       href="https://serv-io.surge.sh"
                       target="_blank"
+                      rel="noreferrer"
                       className="
                         inline-block
                         py-2
@@ -68,13 +68,12 @@ function ProjectCard() {
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/servio-34472.appspot.com/o/portfolio-projects%2FCaptura%20de%20Pantalla%202022-01-25%20a%20la(s)%205.26.14%20p.m..png?alt=media&token=41332a5c-441d-4904-a307-2513c63336c5"
-                    alt="image"
+                    alt="proyecto"
                     className="w-full"
                   />
                   <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                     <h3>
-                      <a
-                        href="javascript:void(0)"
+                      <p
                         className="
                           font-semibold
                           text-dark text-xl
@@ -89,7 +88,7 @@ function ProjectCard() {
                           "
                       >
                         Catálogos de Sissy
-                      </a>
+                      </p>
                     </h3>
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
                       Esta aplicación te ayuda a tener un mejor alcance de
@@ -102,6 +101,7 @@ function ProjectCard() {
                     <a
                       href="https://catalogos-de-sissy.surge.sh"
                       target="_blank"
+                      rel="noreferrer"
                       className="
                         inline-block
                         py-2
@@ -123,13 +123,12 @@ function ProjectCard() {
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/servio-34472.appspot.com/o/portfolio-projects%2FCaptura%20de%20Pantalla%202022-01-25%20a%20la(s)%205.25.38%20p.m..png?alt=media&token=09e7a9af-88a1-48dc-8419-9de0bc84e5f9"
-                    alt="image"
+                    alt="proyecto"
                     className="w-full"
                   />
                   <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                     <h3>
-                      <a
-                        href="javascript:void(0)"
+                      <p
                         className="
                           font-semibold
                           text-dark text-xl
@@ -144,7 +143,7 @@ function ProjectCard() {
                           "
                       >
                         Náutica SerCyn
-                      </a>
+                      </p>
                     </h3>
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
                       Es una página web, orientada a servicios turísticos, de
@@ -156,6 +155,7 @@ function ProjectCard() {
                     <a
                       href="https://www.sercyn.com"
                       target="_blank"
+                      rel="noreferrer"
                       className="
                         inline-block
                         py-2
@@ -177,13 +177,12 @@ function ProjectCard() {
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/servio-34472.appspot.com/o/portfolio-projects%2FCaptura%20de%20Pantalla%202022-01-25%20a%20la(s)%207.04.14%20p.m.%20(2).png?alt=media&token=d23317a1-3694-49c3-8f8b-16302c46577f"
-                    alt="image"
+                    alt="proyecto"
                     className="w-full"
                   />
                   <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                     <h3>
-                      <a
-                        href="javascript:void(0)"
+                      <p
                         className="
                           font-semibold
                           text-dark text-xl
@@ -198,7 +197,7 @@ function ProjectCard() {
                           "
                       >
                         McLovIT
-                      </a>
+                      </p>
                     </h3>
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
                       Esta es una app hecha con React Native para los diferentes
@@ -215,6 +214,7 @@ function ProjectCard() {
                     <a
                       href="https://github.com/carolnavia/Mc-Loving-ForEver"
                       target="_blank"
+                      rel="noreferrer"
                       className="
                         inline-block
                         py-2
@@ -236,13 +236,12 @@ function ProjectCard() {
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/servio-34472.appspot.com/o/portfolio-projects%2FCaptura%20de%20Pantalla%202022-01-25%20a%20la(s)%206.57.08%20p.m..png?alt=media&token=d8f07898-cc25-4edc-b300-0b095cfec178"
-                    alt="image"
+                    alt="proyecto"
                     className="w-full"
                   />
                   <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                     <h3>
-                      <a
-                        href="javascript:void(0)"
+                      <p
                         className="
                           font-semibold
                           text-dark text-xl
@@ -257,7 +256,7 @@ function ProjectCard() {
                           "
                       >
                         Henry Pokemon App
-                      </a>
+                      </p>
                     </h3>
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
                       Esta es una SPA (Single Page Aplication) hecha
@@ -272,6 +271,7 @@ function ProjectCard() {
                     <a
                       href="https://pako-pokedex.surge.sh"
                       target="_blank"
+                      rel="noreferrer"
                       className="
                         inline-block
                         py-2
@@ -293,13 +293,12 @@ function ProjectCard() {
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/servio-34472.appspot.com/o/portfolio-projects%2FCaptura%20de%20Pantalla%202022-02-06%20a%20la(s)%2010.07.50%20p.m..png?alt=media&token=3f39cbd1-6800-4ebf-b37c-9f8844cac6f4"
-                    alt="image"
+                    alt="Proyecto"
                     className="w-full"
                   />
                   <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                     <h3>
-                      <a
-                        href="javascript:void(0)"
+                      <p
                         className="
                           font-semibold
                           text-dark text-xl
@@ -314,7 +313,7 @@ function ProjectCard() {
                           "
                       >
                         Henry Weather App
-                      </a>
+                      </p>
                     </h3>
                     <p className="text-base text-justify text-body-color leading-relaxed mb-7">
                       Esta es una SPA (Single Page Aplication) hecha
@@ -329,6 +328,7 @@ function ProjectCard() {
                     <a
                       href="https://pako-weather.surge.sh"
                       target="_blank"
+                      rel="noreferrer"
                       className="
                         inline-block
                         py-2
