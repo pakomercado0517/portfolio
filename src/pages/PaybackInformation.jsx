@@ -7,14 +7,21 @@ function PaybackInformation() {
   const createDocument = useCreatePDF();
 
   useEffect(() => {
+    const formatNumber = new Intl.NumberFormat("es-MX", {
+      style: "currency",
+      currency: "MXN",
+    });
+
     if (data.length !== 0) {
       const montoAntesIVA = data.total / 1.16;
       const getComision = (montoAntesIVA * data.percentage) / 100;
+      const getTotal = data.total - getComision;
+
       setGetTotal({
         empresa: data.name,
-        monto: data.total,
-        comision: getComision,
-        total: data.total - getComision,
+        monto: formatNumber.format(data.total),
+        comision: formatNumber.format(getComision),
+        total: formatNumber.format(getTotal),
       });
     }
   }, [data]);
