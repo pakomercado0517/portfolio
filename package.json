@@ -10,6 +10,7 @@
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.7.0",
     "react": "^18.2.0",
+    "react-currency-input-field": "^3.6.11",
     "react-dom": "^18.2.0",
     "react-router": "^6.16.0",
     "react-router-dom": "^6.16.0",
