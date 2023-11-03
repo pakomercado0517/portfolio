@@ -7,25 +7,37 @@ import useFormatNumber from "../hooks/useFormatNumber";
 function PaybackInformation() {
   const [showTable, setShowTable] = useState(false);
   const [getTotal, setGetTotal] = useState([]);
+  const [beforeTax, setBeforeTax] = useState(false);
   const [data, setData] = useState({});
   const createDocument = useCreatePDF();
   const formatNumber = useFormatNumber();
 
   useEffect(() => {
     if (data.length !== 0) {
-      const montoAntesIVA = data.total / 1.16;
-      const getComision = (montoAntesIVA * data.percentage) / 100;
-      const costTotal = data.total - getComision;
+      if (!beforeTax) {
+        const totalMount = data.total * (1 - data.percentage / 100);
+        const comision = data.total * `0.0${data.percentage}`;
+        setGetTotal({
+          empresa: data.name,
+          monto: formatNumber.format(data.total),
+          comision: formatNumber.format(comision),
+          total: formatNumber.format(totalMount),
+        });
+      } else {
+        const montoAntesIVA = data.total / 1.16;
+        const getComision = (montoAntesIVA * data.percentage) / 100;
+        const costTotal = data.total - getComision;
 
-      setGetTotal({
-        empresa: data.name,
-        monto: formatNumber.format(data.total),
-        comision: formatNumber.format(getComision),
-        total: formatNumber.format(costTotal),
-      });
+        setGetTotal({
+          empresa: data.name,
+          monto: formatNumber.format(data.total),
+          comision: formatNumber.format(getComision),
+          total: formatNumber.format(costTotal),
+        });
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
+  }, [data, beforeTax]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,6 +60,12 @@ function PaybackInformation() {
     createDocument(getTotal, false);
   };
 
+  const handleTax = (e) => {
+    e.target.value === "si" ? setBeforeTax(true) : setBeforeTax(false);
+  };
+
+  console.log("beforeTax", beforeTax);
+
   const handleShowTable = () => setShowTable(!showTable);
 
   return (
@@ -62,6 +80,7 @@ function PaybackInformation() {
           handleSubmit={handleSubmit}
           handleShowTable={handleShowTable}
           handleCurrencyInput={handleCurrencyInput}
+          handleTax={handleTax}
         />
       </article>
       <article className={`${!showTable ? "hidden" : ""} mt-10`}>
