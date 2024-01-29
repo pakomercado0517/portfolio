@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
-import { CgNotes } from "react-icons/cg";
 import { FiCodesandbox } from "react-icons/fi";
 import { RiContactsBookLine } from "react-icons/ri";
 
